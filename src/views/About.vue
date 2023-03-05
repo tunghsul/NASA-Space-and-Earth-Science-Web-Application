@@ -1,33 +1,3 @@
-<script>
-export default {
-  data() {
-    return {
-      imageData: null,
-      errorMsg: null,
-      showErrMsg: false,
-    };
-  },
-  methods: {
-    fetchData() {
-      const apiKey = process.env.VUE_APP_API_KEY;
-      this.axios
-        .get("https://api.nasa.gov/planetary/apod?api_key=" + apiKey)
-        .then((res) => {
-          this.imageData = res.data;
-          this.showErrMsg = false;
-        })
-        .catch((err) => {
-          this.showErrMsg = true;
-          this.errorMsg = err.message;
-        });
-    },
-  },
-  mounted() {
-    this.fetchData();
-  },
-};
-</script>
-
 <template>
   <div id="about">
     <img src="../assets/nasaLogo.png" id="about_nasa_img"/>
