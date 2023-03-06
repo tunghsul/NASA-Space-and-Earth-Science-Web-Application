@@ -32,7 +32,7 @@ export default {
 
 <template>
   <div id="home">
-    <div v-show="showErrMsg" id="errMsg">{{ errorMsg }}</div>
+    <div v-show="showErrMsg" class="errMsg">{{ errorMsg }}</div>
     <p v-if="!imageData" v-show="!showErrMsg">Loading...</p>
     <div v-else>
       <img :src="imageData.hdurl" id="home_img" />
@@ -48,7 +48,7 @@ export default {
 }
 
 #home_img {
-  width: 50%;
+  width: 60%;
 }
 
 #home_img_title {
@@ -60,7 +60,14 @@ export default {
   display: inline-block;
 }
 
-#errMsg {
-  color: red;
+@media only screen and (max-width: 1000px) {
+  #home_img {
+    width: 80%;
+  }
+
+  #home_img_exp {
+    width: 80%;
+    display: inline-block;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <img src="../assets/nasaLogo.png" id="about_nasa_img"/>
+    <img src="../assets/nasaLogo.png" id="about_nasa_img" />
     <div id="about_detail">
       <p>
         NASA, or the National Aeronautics and Space Administration, is a U.S.
@@ -33,7 +33,7 @@
 }
 
 #about_nasa_img {
-    width: 35%;
+  width: 35%;
 }
 
 #about_detail {
@@ -42,6 +42,15 @@
 }
 
 #about_detail > p {
-    width: 70%;
+  width: 70%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #about_nasa_img {
+    width: 50%;
+  }
+  #about_detail > p {
+    width: 90%;
+  }
 }
 </style>
