@@ -24,6 +24,8 @@ or
 npm run serve
 ```
 
+> Please change the API key in Homepage.vue(src/views) to your own API key to be able to call the API correctly.
+
 ## Challenge
 
 This challenge is designed to test your ability to fetch data from an external API and render specific properties on the browser as well as screen for basic JS, HTML, and CSS fluency. In order to complete this challenge, you should be familiar HTML, CSS, and JS.
